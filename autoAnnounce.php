@@ -4,7 +4,7 @@
  * Plugin Name: autoAnnounce
  * Version: 0.0.1
  * Details: Auto announces messages every set amount of minutes.
- * Created Date: Monday, April 17th 2018, 9:26:00 pm
+ * Created Date: Tuesday, April 17th 2018, 9:26:00 pm
  * Author: Avery Johnson
  *
  * Copyright (c) 2018 Avery Johnson
