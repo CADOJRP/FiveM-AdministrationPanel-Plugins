@@ -23,7 +23,7 @@ class antiSwear
             'whore',
             'fuck'
         ];
-
+        
         foreach ($blacklist as $banned) {
             if (strpos($banned, $message) !== false) {
                 if ($config['action'] == "kick") {
