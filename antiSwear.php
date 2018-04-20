@@ -24,7 +24,7 @@ class antiSwear
             'fuck'
         ];
         
-        foreach ($blacklist as $banned) {
+        foreach ($config['blacklist'] as $banned) {
             if (strpos($banned, $message) !== false) {
                 if ($config['action'] == "kick") {
                     dbquery('INSERT INTO kicks (license, reason, staff_name, staff_steamid, time) VALUES ("' . escapestring($license) . '", "' . $config['reason'] . '", "Console", "Console")', false);
