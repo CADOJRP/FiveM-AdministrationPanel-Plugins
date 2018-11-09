@@ -28,8 +28,8 @@ class antiSwear
             if (strpos($banned, $message) !== false) {
                 if ($config['action'] == "kick") {
                     dbquery('INSERT INTO kicks (license, reason, staff_name, staff_steamid, time) VALUES ("' . escapestring($license) . '", "' . $config['reason'] . '", "Console", "Console")', false);
+                    removeFromSession($license, 'You\'ve been kicked by Console for ' . $config['reason']);
                     if ($config['announce']) {
-                        removeFromSession($license, 'You\'ve been kicked by Console for ' . $config['reason']);
                         sendMessage('^3' . dbquery("SELECT * FROM players WHERE license='" . escapestring($license) . "'")[0]['name'] . '^0 has been kicked by ^2Console^0 for ^3' . $config['reason']);
                     }
                 } else {
